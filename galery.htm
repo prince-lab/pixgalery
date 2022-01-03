@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<boddy>
+    <div class="wrapper y-sroll-snap">
+        <div id="div1"><img src="penguins.jpg"></div>
+        <div id="div2"><img src="koala.jpg"></div>
+        <div id="div3"><img src="lighthouse.jpg"></div>
+        <div  id="div4"><img src="tulips.jpg"></div>
+
+    </div>
+    <nav>
+        <a href="#div1"><img src="penguins.jpg"></a>
+        <a href="#div2"><img src="koala.jpg"></a>
+        <a href="#div3"><img src="lighthouse.jpg"></a>
+        <a href="#div4"><img src="tulips.jpg"></a>
+    </nav>
+</boddy>
+
+
+
+<style>
+      body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+        }
+
+        /* smooth scroll  */
+        .wrapper {
+            display: flex;
+            overflow: hidden;
+            flex: none;
+            width: 80vw;
+            height: 80vh;
+            flex-flow: column nowrap;
+        }
+
+        .y-scroll-snap {
+            scroll-snap-type: y mandatory;
+        }
+
+        .wrapper>div {
+            text-align: center;
+            scroll-snap-align: center;
+            flex: none;
+            line-height: 3;
+            font-size: 128px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .wrapper>div:nth-child(even) {
+            background-color: lightsalmon;
+        }
+
+        .wrapper>div:nth-child(odd) {
+            background-color: lightpink;
+        }
+     a img{
+         height: 100%;
+         width: 100%;
+         border: 3px solid rgb(24, 192, 108);
+         border-bottom-left-radius: 40px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 40px;
+        border-top-right-radius: 70px;
+     }
+      nav { 
+          width: 100vw; 
+          display: flex;
+       
+       margin-top: 5px;
+       position: absolute;
+         align-items: center; 
+         justify-content: center;
+     }
+     a {
+        height: 30%;
+        width: 8%;
+        
+       }  
+       div>img{
+           height: inherit;
+           width: inherit;
+       }
+</style>
+</html>
